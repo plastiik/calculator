@@ -12,3 +12,18 @@ with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) 
 3. Run `docker compose up --pull always -d --wait` to set up and start a fresh Symfony project
 4. Open `https://localhost` in your favorite web browser and [accept the auto-generated TLS certificate](https://stackoverflow.com/a/15076602/1352334)
 5. Run `docker compose down --remove-orphans` to stop the Docker containers.
+
+## Github CI Jobs
+
+These are run to ensure standards (PSR-2) and that everything works correctly, the following checks are done:
+
+1. Integrity of docker image and services
+2. PHP Standards
+3. Code Sniff's
+4. HTTP Checks, to see if app is reachable
+5. DB integrity checks
+6. Symfony integrity checks
+7. PHPUnit tests are run and passing
+8. Check integrity of composer packages
+
+All can be found within `.github/workflows/*`.
