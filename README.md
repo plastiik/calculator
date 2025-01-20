@@ -27,3 +27,16 @@ These are run to ensure standards (PSR-2) and that everything works correctly, t
 8. Check integrity of composer packages
 
 All can be found within `.github/workflows/*`.
+
+## Branches Protection
+
+I could enforce more protections on branches, using a rules that can be read on here:
+- https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches
+- https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets
+
+I'm not doing this as this would require someone to review my code and so on.
+
+But an example of rules set would be:
+
+1. Main branch is protected and can't commit directly to it
+2. Branches can only be merged into main if code is reviewed and CI Jobs passing
