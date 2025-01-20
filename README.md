@@ -3,8 +3,6 @@
 A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework,
 with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) inside!
 
-![CI FROM DOCKER PACKAGE](https://github.com/dunglas/symfony-docker/workflows/CI/badge.svg)
-
 ## Getting Started
 
 1. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)

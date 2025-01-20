@@ -1,5 +1,34 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    Calculator goes here.
+    <form action="{{ url('calculate') }}" method="post">
+        <input type="hidden" name="token" value="{{ csrf_token('calculate') }}">
+        <table>
+            <tr>
+                <td>
+                    <input required type="number" name="input-one" value="">
+                </td>
+                <td>
+                    <select required name="operator">
+                        <option value="">--Operator--</option>
+                        <option value="plus">Plus</option>
+                        <option value="minus">Minus</option>
+                        <option value="multiplication">Multiplication</option>
+                        <option value="division">Division</option>
+                    </select>
+                </td>
+                <td>
+                    <input required type="number" name="input-two" value="">
+                </td>
+                <td>
+                    <button type="submit">Calculate</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    Result: N/A
+                </td>
+            </tr>
+        </table>
+    </form>
 {% endblock %}
