@@ -4,5 +4,5 @@ namespace App\Entity\Operation;
 
 interface OperationInterface
 {
-    public function runCalculation($firstNumber, $secondNumber): float;
+    public function runCalculation(float $firstNumber, float $secondNumber): float;
 }

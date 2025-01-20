@@ -34,7 +34,7 @@ class Calculator
         return $this->firstNumber;
     }
 
-    public function setFirstNumber($firstNumber): float
+    public function setFirstNumber(float $firstNumber): void
     {
         $this->firstNumber = $firstNumber;
     }
@@ -44,7 +44,7 @@ class Calculator
         return $this->secondNumber;
     }
 
-    public function setSecondNumber($secondNumber): float
+    public function setSecondNumber(float $secondNumber): void
     {
         $this->secondNumber = $secondNumber;
     }
@@ -54,7 +54,7 @@ class Calculator
         return $this->operand;
     }
 
-    public function setOperand($operand): void
+    public function setOperand(string $operand): void
     {
         $this->operand = $operand;
     }
