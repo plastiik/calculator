@@ -12,12 +12,14 @@ class Calculator
 {
     /**
      * @Assert\Type("integer")
+     *
      * @Assert\NotEqualTo("0")
      */
     public $firstNumber;
 
     /**
      * @Assert\Type("integer")
+     *
      * @Assert\NotEqualTo("0")
      */
     public $secondNumber;
@@ -28,7 +30,7 @@ class Calculator
     public $operand;
 
     /**
-     * @return integer
+     * @return int
      */
     public function getFirstNumber()
     {
@@ -36,7 +38,7 @@ class Calculator
     }
 
     /**
-     * @param integer $firstNumber
+     * @param int $firstNumber
      */
     public function setFirstNumber($firstNumber)
     {
@@ -44,7 +46,7 @@ class Calculator
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getSecondNumber()
     {
@@ -52,7 +54,7 @@ class Calculator
     }
 
     /**
-     * @param integer $secondNumber
+     * @param int $secondNumber
      */
     public function setSecondNumber($secondNumber)
     {
@@ -60,7 +62,7 @@ class Calculator
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getOperand()
     {
@@ -68,7 +70,7 @@ class Calculator
     }
 
     /**
-     * @param integer $operand
+     * @param int $operand
      */
     public function setOperand($operand)
     {
@@ -77,18 +79,18 @@ class Calculator
 
     public function performCalculation()
     {
-        switch ($this->getOperand())
-        {
-            case "add":
+        switch ($this->getOperand()) {
+            default:
+            case 'add':
                 $operation = new Add();
                 break;
-            case "subtract":
+            case 'subtract':
                 $operation = new Subtract();
                 break;
-            case "multiply":
+            case 'multiply':
                 $operation = new Multiply();
                 break;
-            case "divide":
+            case 'divide':
                 $operation = new Divide();
                 break;
         }

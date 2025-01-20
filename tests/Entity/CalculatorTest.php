@@ -12,7 +12,7 @@ class CalculatorTest extends TestCase
         $calculator = new Calculator();
         $calculator->setFirstNumber(2);
         $calculator->setSecondNumber(2);
-        $calculator->setOperand("add");
+        $calculator->setOperand('add');
 
         $result = $calculator->performCalculation();
 
