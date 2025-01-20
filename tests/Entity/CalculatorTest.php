@@ -9,10 +9,7 @@ class CalculatorTest extends TestCase
 {
     public function testCalculator()
     {
-        $calculator = new Calculator();
-        $calculator->setFirstNumber(2);
-        $calculator->setSecondNumber(2);
-        $calculator->setOperand('add');
+        $calculator = new Calculator(2, 2, 'add');
 
         $result = $calculator->performCalculation();
 

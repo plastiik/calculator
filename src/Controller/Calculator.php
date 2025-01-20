@@ -21,6 +21,10 @@ class Calculator extends AbstractController
     #[IsCsrfTokenValid('calculate', tokenKey: 'token')]
     public function calculate(): array
     {
-        return ['test' => 'test'];
+        $calculator = new \App\Entity\Calculator(2, 2, 'add');
+
+        return [
+            'result' => $calculator->performCalculation(),
+        ];
     }
 }

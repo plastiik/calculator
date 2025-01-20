@@ -6,37 +6,19 @@ use App\Entity\Operation\Add;
 use App\Entity\Operation\Divide;
 use App\Entity\Operation\Multiply;
 use App\Entity\Operation\Subtract;
-use Symfony\Component\Validator\Constraints as Assert;
 
 class Calculator
 {
-    /**
-     * @Assert\Type("float")
-     *
-     * @Assert\NotEqualTo("0")
-     */
-    public $firstNumber;
-
-    /**
-     * @Assert\Type("float")
-     *
-     * @Assert\NotEqualTo("0")
-     */
-    public $secondNumber;
-
-    /**
-     * @Assert\Choice({"add", "subtract", "multiply", "divide"})
-     */
-    public $operand;
+    public function __construct(
+        public float $firstNumber,
+        public float $secondNumber,
+        public string $operand,
+    ) {
+    }
 
     public function getFirstNumber(): float
     {
         return $this->firstNumber;
-    }
-
-    public function setFirstNumber(float $firstNumber): void
-    {
-        $this->firstNumber = $firstNumber;
     }
 
     public function getSecondNumber(): float
@@ -44,19 +26,9 @@ class Calculator
         return $this->secondNumber;
     }
 
-    public function setSecondNumber(float $secondNumber): void
-    {
-        $this->secondNumber = $secondNumber;
-    }
-
     public function getOperand(): string
     {
         return $this->operand;
-    }
-
-    public function setOperand(string $operand): void
-    {
-        $this->operand = $operand;
     }
 
     public function performCalculation(): float
