@@ -11,14 +11,14 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Calculator
 {
     /**
-     * @Assert\Type("integer")
+     * @Assert\Type("float")
      *
      * @Assert\NotEqualTo("0")
      */
     public $firstNumber;
 
     /**
-     * @Assert\Type("integer")
+     * @Assert\Type("float")
      *
      * @Assert\NotEqualTo("0")
      */
@@ -29,55 +29,37 @@ class Calculator
      */
     public $operand;
 
-    /**
-     * @return int
-     */
-    public function getFirstNumber()
+    public function getFirstNumber(): float
     {
         return $this->firstNumber;
     }
 
-    /**
-     * @param int $firstNumber
-     */
-    public function setFirstNumber($firstNumber)
+    public function setFirstNumber($firstNumber): float
     {
         $this->firstNumber = $firstNumber;
     }
 
-    /**
-     * @return int
-     */
-    public function getSecondNumber()
+    public function getSecondNumber(): float
     {
         return $this->secondNumber;
     }
 
-    /**
-     * @param int $secondNumber
-     */
-    public function setSecondNumber($secondNumber)
+    public function setSecondNumber($secondNumber): float
     {
         $this->secondNumber = $secondNumber;
     }
 
-    /**
-     * @return int
-     */
-    public function getOperand()
+    public function getOperand(): string
     {
         return $this->operand;
     }
 
-    /**
-     * @param int $operand
-     */
-    public function setOperand($operand)
+    public function setOperand($operand): void
     {
         $this->operand = $operand;
     }
 
-    public function performCalculation()
+    public function performCalculation(): float
     {
         switch ($this->getOperand()) {
             default:
