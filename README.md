@@ -15,9 +15,9 @@ with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) 
 
 ## Github CI Jobs
 
-![CI](https://github.com/plastiik/calculator/workflows/ci/badge.svg)
-![PSALM](https://github.com/plastiik/calculator/workflows/psalm/badge.svg)
-![SYMFONY](https://github.com/plastiik/calculator/workflows/symfony/badge.svg)
+![CI](https://github.com/plastiik/calculator/workflows/CI/badge.svg)
+![PSALM](https://github.com/plastiik/calculator/workflows/PSALM/badge.svg)
+![SYMFONY](https://github.com/plastiik/calculator/workflows/SYMFONY/badge.svg)
 
 These are run to ensure standards (PSR-2) and that everything works correctly, the following checks are done:
 
