@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50051f81188129f9028f8769c43a1682",
+    "content-hash": "349fcba3c91af79d54c285245cb929da",
     "packages": [
         {
             "name": "composer/semver",
@@ -7562,6 +7562,56 @@
     ],
     "packages-dev": [
         {
+            "name": "exussum12/coverage-checker",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/exussum12/coverageChecker.git",
+                "reference": "0a0350772ca3077d18e87118ffb1d9338b10c63c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/exussum12/coverageChecker/zipball/0a0350772ca3077d18e87118ffb1d9338b10c63c",
+                "reference": "0a0350772ca3077d18e87118ffb1d9338b10c63c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-xmlreader": "*",
+                "nikic/php-parser": "^3.1||^4.0||^5.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0"
+            },
+            "bin": [
+                "bin/diffFilter"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "exussum12\\CoverageChecker\\": "src/",
+                    "exussum12\\CoverageChecker\\tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Dutton",
+                    "email": "scott@exussum.co.uk"
+                }
+            ],
+            "description": "Allows checking the code coverage of a single pull request",
+            "support": {
+                "issues": "https://github.com/exussum12/coverageChecker/issues",
+                "source": "https://github.com/exussum12/coverageChecker/tree/1.1.1"
+            },
+            "time": "2024-06-25T15:05:17+00:00"
+        },
+        {
             "name": "masterminds/html5",
             "version": "2.9.0",
             "source": {
@@ -9248,6 +9298,86 @@
                 }
             ],
             "time": "2020-09-28T06:39:44+00:00"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "3.11.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
+                "reference": "1368f4a58c3c52114b86b1abe8f4098869cb0079"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/1368f4a58c3c52114b86b1abe8f4098869cb0079",
+                "reference": "1368f4a58c3c52114b86b1abe8f4098869cb0079",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.3.4"
+            },
+            "bin": [
+                "bin/phpcbf",
+                "bin/phpcs"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "Former lead"
+                },
+                {
+                    "name": "Juliette Reinders Folmer",
+                    "role": "Current lead"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/PHPCSStandards/PHP_CodeSniffer/graphs/contributors"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "https://github.com/PHPCSStandards/PHP_CodeSniffer",
+            "keywords": [
+                "phpcs",
+                "standards",
+                "static analysis"
+            ],
+            "support": {
+                "issues": "https://github.com/PHPCSStandards/PHP_CodeSniffer/issues",
+                "security": "https://github.com/PHPCSStandards/PHP_CodeSniffer/security/policy",
+                "source": "https://github.com/PHPCSStandards/PHP_CodeSniffer",
+                "wiki": "https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/PHPCSStandards",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/jrfnl",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/php_codesniffer",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2024-12-11T16:04:26+00:00"
         },
         {
             "name": "symfony/browser-kit",

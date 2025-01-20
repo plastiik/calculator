@@ -101,7 +101,9 @@
         }
     },
     "require-dev": {
+        "exussum12/coverage-checker": "^1.1",
         "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.11",
         "symfony/browser-kit": "7.2.*",
         "symfony/css-selector": "7.2.*",
         "symfony/debug-bundle": "7.2.*",
