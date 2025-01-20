@@ -14,4 +14,28 @@ class SubtractTest extends TestCase
 
         $this->assertEquals(1, $result);
     }
+
+    public function testAddNegativeNumbers()
+    {
+        $add = new Subtract();
+        $result = $add->runCalculation(-10, -2);
+
+        $this->assertEquals(-8, $result);
+    }
+
+    public function testAddPositiveAndNegativeNumbers()
+    {
+        $add = new Subtract();
+        $result = $add->runCalculation(10, -2);
+
+        $this->assertEquals(12, $result);
+    }
+
+    public function testAddPositiveAndNegativeNumbersReverse()
+    {
+        $add = new Subtract();
+        $result = $add->runCalculation(-10, 2);
+
+        $this->assertEquals(-12, $result);
+    }
 }

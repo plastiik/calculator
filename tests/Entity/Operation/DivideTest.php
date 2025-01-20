@@ -14,4 +14,28 @@ class DivideTest extends TestCase
 
         $this->assertEquals(2.5, $result);
     }
+
+    public function testAddNegativeNumbers()
+    {
+        $add = new Divide();
+        $result = $add->runCalculation(-10, -2);
+
+        $this->assertEquals(5, $result);
+    }
+
+    public function testAddPositiveAndNegativeNumbers()
+    {
+        $add = new Divide();
+        $result = $add->runCalculation(10, -2);
+
+        $this->assertEquals(-5, $result);
+    }
+
+    public function testAddPositiveAndNegativeNumbersReverse()
+    {
+        $add = new Divide();
+        $result = $add->runCalculation(-10, 2);
+
+        $this->assertEquals(-5, $result);
+    }
 }

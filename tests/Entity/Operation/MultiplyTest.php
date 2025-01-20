@@ -14,4 +14,28 @@ class MultiplyTest extends TestCase
 
         $this->assertEquals(10, $result);
     }
+
+    public function testAddNegativeNumbers()
+    {
+        $add = new Multiply();
+        $result = $add->runCalculation(-10, -2);
+
+        $this->assertEquals(20, $result);
+    }
+
+    public function testAddPositiveAndNegativeNumbers()
+    {
+        $add = new Multiply();
+        $result = $add->runCalculation(10, -2);
+
+        $this->assertEquals(-20, $result);
+    }
+
+    public function testAddPositiveAndNegativeNumbersReverse()
+    {
+        $add = new Multiply();
+        $result = $add->runCalculation(-10, 2);
+
+        $this->assertEquals(-20, $result);
+    }
 }

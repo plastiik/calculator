@@ -14,4 +14,20 @@ class AddTest extends TestCase
 
         $this->assertEquals(59, $result);
     }
+
+    public function testAddNegativeNumbers()
+    {
+        $add = new Add();
+        $result = $add->runCalculation(-1, -1);
+
+        $this->assertEquals(-2, $result);
+    }
+
+    public function testAddPositiveAndNegativeNumbers()
+    {
+        $add = new Add();
+        $result = $add->runCalculation(10, -1);
+
+        $this->assertEquals(9, $result);
+    }
 }
