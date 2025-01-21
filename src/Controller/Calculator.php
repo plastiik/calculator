@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-
 use Symfony\Bridge\Twig\Attribute\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,9 +14,24 @@ class Calculator extends AbstractController
     #[Template('calculator.html.twig')]
     public function view(Request $request): array
     {
+        /**
+         * @var float
+         *
+         * @psalm-suppress InternalMethod
+         */
         $firstNumber = $request->get('firstNumber') ?: 0;
-        $secondNumber = $request->get('secondNumber')?: 0;
-        $operand = $request->get('operand')?: '';
+        /**
+         * @var float
+         *
+         * @psalm-suppress InternalMethod
+         */
+        $secondNumber = $request->get('secondNumber') ?: 0;
+        /**
+         * @var string
+         *
+         * @psalm-suppress InternalMethod
+         */
+        $operand = $request->get('operand') ?: '';
 
         $calculator = new \App\Entity\Calculator(
             $firstNumber,
