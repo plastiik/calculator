@@ -11,6 +11,8 @@ with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) 
 4. Open `https://localhost/calculator` in your favorite web browser and [accept the auto-generated TLS certificate](https://stackoverflow.com/a/15076602/1352334)
 5. Run `docker compose down --remove-orphans` to stop the Docker containers.
 
+Solution is quite simple, as I believe its pointless to overcomplicate this.
+
 ## Github CI Jobs
 
 ![CI](https://github.com/plastiik/calculator/actions/workflows/ci.yml/badge.svg)
