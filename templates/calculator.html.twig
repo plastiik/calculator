@@ -1,34 +1,36 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <form action="{{ url('calculate') }}" method="post">
-        <input type="hidden" name="token" value="{{ csrf_token('calculate') }}">
+    <form action="{{ url('calculator') }}" method="GET">
+
         <table>
             <tr>
                 <td>
-                    <input required type="number" name="firstNumber" value="">
+                    <input required type="number" name="firstNumber" value="{% if firstNumber is defined %} {{- firstNumber -}} {% endif %}">
                 </td>
                 <td>
                     <select required name="operand">
                         <option value="">--Operator--</option>
-                        <option value="plus">Plus</option>
-                        <option value="minus">Minus</option>
-                        <option value="multiplication">Multiplication</option>
-                        <option value="division">Division</option>
+                        <option value="plus" {% if operand is defined and operand == 'plus' %} selected {% endif %}>Plus</option>
+                        <option value="minus" {% if operand is defined and operand == 'minus' %} selected {% endif %}>Minus</option>
+                        <option value="multiplication" {% if operand is defined and operand == 'multiplication' %} selected {% endif %}>Multiplication</option>
+                        <option value="division" {% if operand is defined and operand == 'division' %} selected {% endif %}>Division</option>
                     </select>
                 </td>
                 <td>
-                    <input required type="number" name="secondNumber" value="">
+                    <input required type="number" name="secondNumber" value="{% if secondNumber is defined %} {{- secondNumber -}} {% endif %}">
                 </td>
                 <td>
                     <button type="submit">Calculate</button>
                 </td>
             </tr>
-            <tr>
-                <td colspan="4">
-                    Result: N/A
-                </td>
-            </tr>
+            {% if result is defined %}
+                <tr>
+                    <td colspan="4">
+                        Result: {{- result -}}
+                    </td>
+                </tr>
+            {% endif %}
         </table>
     </form>
 {% endblock %}

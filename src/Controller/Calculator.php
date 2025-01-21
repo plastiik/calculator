@@ -2,28 +2,33 @@
 
 namespace App\Controller;
 
+
 use Symfony\Bridge\Twig\Attribute\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
-use Symfony\Component\Security\Http\Attribute\IsCsrfTokenValid;
 
 /** @psalm-api */
 class Calculator extends AbstractController
 {
-    #[Route('/calculator', name: 'view')]
+    #[Route('/calculator', name: 'calculator')]
     #[Template('calculator.html.twig')]
-    public function view(): array
+    public function view(Request $request): array
     {
-        return ['test' => 'test'];
-    }
+        $firstNumber = $request->get('firstNumber') ?: 0;
+        $secondNumber = $request->get('secondNumber')?: 0;
+        $operand = $request->get('operand')?: '';
 
-    #[Route('/calculate', name: 'calculate')]
-    #[IsCsrfTokenValid('calculate', tokenKey: 'token')]
-    public function calculate(): array
-    {
-        $calculator = new \App\Entity\Calculator(2, 2, 'add');
+        $calculator = new \App\Entity\Calculator(
+            $firstNumber,
+            $secondNumber,
+            $operand
+        );
 
         return [
+            'firstNumber' => $firstNumber,
+            'secondNumber' => $secondNumber,
+            'operand' => $operand,
             'result' => $calculator->performCalculation(),
         ];
     }

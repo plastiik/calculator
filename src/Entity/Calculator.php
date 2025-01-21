@@ -38,13 +38,13 @@ class Calculator
             case 'add':
                 $operation = new Add();
                 break;
-            case 'subtract':
+            case 'minus':
                 $operation = new Subtract();
                 break;
-            case 'multiply':
+            case 'multiplication':
                 $operation = new Multiply();
                 break;
-            case 'divide':
+            case 'division':
                 $operation = new Divide();
                 break;
         }
